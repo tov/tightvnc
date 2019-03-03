@@ -117,8 +117,12 @@ XCOMM binutils:	(LinuxBinUtilsMajorVersion)
 /* For compatibility */
 #define SourceDefines		LinuxSourceDefines
 
-#define HasGcc			YES
+#ifndef HasGcc
+# define HasGcc			YES
+#endif
+#ifndef HasGcc2
 #define HasGcc2			YES
+#endif
 #ifndef HasGcc2ForCplusplus
 # define HasGcc2ForCplusplus	YES
 #endif
